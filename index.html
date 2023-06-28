@@ -1,100 +1,25 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<HTML>
 <head>
   <title>Shopping Cart</title>
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 8px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    .cart-button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
   <h1>Shopping Cart</h1>
 
-  <table>
-    <tr>
-      <th>Product</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>Product 1</td>
-      <td>$10.99</td>
-      <td><input type="number" value="1" min="1"></td>
-      <td><button class="cart-button">Add to Cart</button></td>
-    </tr>
-    <tr>
-      <td>Product 2</td>
-      <td>$19.99</td>
-      <td><input type="number" value="1" min="1"></td>
-      <td><button class="cart-button">Add to Cart</button></td>
-    </tr>
-    <tr>
-      <td>Product 3</td>
-      <td>$14.99</td>
-      <td><input type="number" value="1" min="1"></td>
-      <td><button class="cart-button">Add to Cart</button></td>
-    </tr>
-  </table>
-
-  <h2>Shopping Cart Summary</h2>
-
-  <table>
-    <tr>
-      <th>Product</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Total</th>
-    </tr>
-    <!-- Cart items will be dynamically added here -->
-  </table>
-
-  <script>
-    const addToCartButtons = document.querySelectorAll('.cart-button');
-    const cartTable = document.querySelector('table:last-of-type');
-
-    addToCartButtons.forEach((button) => {
-      button.addEventListener('click', addToCart);
-    });
-
-    function addToCart(event) {
-      const button = event.target;
-      const productRow = button.parentNode.parentNode;
-      const productCells = productRow.getElementsByTagName('td');
-
-      const product = productCells[0].innerText;
-      const price = parseFloat(productCells[1].innerText.replace('$', ''));
-      const quantity = parseInt(productCells[2].getElementsByTagName('input')[0].value);
-
-      const newRow = cartTable.insertRow(-1);
-      const newCells = [product, price, quantity, price * quantity];
-
-      for (let i = 0; i < newCells.length; i++) {
-        const cell = newRow.insertCell(i);
-        cell.innerHTML = newCells[i];
-      }
-    }
-  </script>
-</body>
-</html>
+  <div id="items">
+    <div class="item">
+      <h3>Item 1</h3>
+      <p>Price: Rs 10</p>
+      <button onclick="addToCart('Item 1', 10)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <h3>Item 2</h3>
+      <p>Price: Rs 15</p>
+      <button onclick="addToCart('Item 2', 15)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <h3>Item 3</h3>
+      <p>Price: Rs 20</p>
+      <button onclick="addToCart('Item 3', 20)">Add to Cart</button>
+    </div>
+  </div>
