@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Cart</h1>
+    <div id="cart-items"></div>
+
+    <script>
+        function updateCart() {
+            var cartItemsElement = document.getElementById('cart-items');
+            cartItemsElement.innerHTML = '';
+
+            var productElements = document.querySelectorAll('.col');
+            var totalItems = 0;
+
+            productElements.forEach(function(element) {
+                var quantityElement = element.querySelector('.quantity');
+                var quantity = parseInt(quantityElement.textContent);
+                if (quantity > 0) {
+                    var productName = element.querySelector('h3').textContent;
+                    var productPrice = element.querySelector('span').textContent;
+                    var productImage = element.querySelector('img').getAttribute('src');
+
+                    var cartItem = document.createElement('div');
+                    cartItem.classList.add('row', 'my-3');
+                    cartItem.innerHTML = `
+                        <div class="col">
+                            <img src="${productImage}" alt="Image not Found" style="width: 100px;">
+                        </div>
+                        <div class="col">
+                            <h3>${productName}</h3>
+                        </div>
+                        <div class="col">
+                            <span>${productPrice}</span>
+                        </div>
+                        <div class="col">
+                            <span>${quantity}</span>
+                        </div>
+                    `;
+                    cartItemsElement.appendChild(cartItem);
+
+                    totalItems += quantity;
+                }
+            });
+
+            if (totalItems === 0) {
+                cartItemsElement.innerHTML = '<p>Your cart is empty.</p>';
+            }
+        }
+
+        // Update the cart on page load
+        window.addEventListener('load', updateCart);
+    </script>
+</body>
+</html>
