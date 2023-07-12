@@ -1,25 +1,276 @@
-<!DOCTYPE HTML>
-<HTML>
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Shopping Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 07 Store 🛒</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
-<body>
-  <h1>Shopping Cart</h1>
+<body> 
+ 
+    <header>
+        <h1> 07 Store 🛒 </h1>
+        <i class='bx bxs-shopping-bags'></i>
+        <nav>
+            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwiZk4ql0uP_AhWEk2YCHV6wBCIYABAAGgJzbQ&sig=AOD64_2Gfq8LVevCybK1VTc9tocXv4kbjg&q&adurl&ved=2ahUKEwianYKl0uP_AhWvb2wGHU-HAOkQ0Qx6BAgGEAE"> More Product </a>
+        </nav>
+    </header>
+    <section>
+        <div>
+            <h2> Shoes </h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                    <img src="../IMAGES/shoe.jpeg" alt="Image not Found"/>
+                    <h3> Nike Shoe </h3>
+                    <span> ₹1500 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div>
+            <div class="col"> 
+                <img src="../IMAGES/asianshoe.jpeg" alt="Image not Found"/>
+                    <h3> Asian Shoe </h3>
+                    <span> ₹799 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div>
+            <div class="col"> 
+                <img src="../IMAGES/campusshoe.jpeg" alt="Image not Found"/>
+                    <h3> Campus Shoe </h3>
+                    <span> ₹999 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div>
+        </div>
+            <hr/>
+        <div>
+                <h2> HeadPhones </h2>
+        </div>
+        <div class="row">
+            <div class="col"> 
+                <img src="../IMAGES/tws.jpeg" alt="Image not Found"/>
+                    <h3> Wings TWS </h3>
+                    <span> ₹1499 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div> 
+            <div class="col"> 
+                <img src="../IMAGES/noise.jpeg" alt="Image not Found"/>
+                    <h3> Noise Buds Combat </h3>
+                    <span> ₹1234 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div>
+            <div class="col"> 
+                <img src="../IMAGES/boat.jpeg" alt="Image not Found"/>
+                    <h3> Boat Netflix Series HeadPhone </h3>
+                    <span> ₹3499 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div>
+        </div>   
+        <hr/>
+        <div>
+                <h2> Bracelets </h2>
+        </div>
+        <div class="row">
+            <div class="col"> 
+                <img src="../IMAGES/bracelet.jpeg" alt="Image not Found"/>
+                    <h3> Healing Stone Bracelet  </h3>
+                    <span> ₹999 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div> 
+            <div class="col"> 
+                <img src="../IMAGES/goldb.jpeg" alt="Image not Found"/>
+                    <h3> Gold Bracelet </h3>
+                    <span> ₹7999 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div>
+            <div class="col"> 
+                <img src="../IMAGES/silverb.jpeg" alt="Image not Found"/>
+                    <h3> Silver Bracelet </h3>
+                    <span> ₹3499 </span>
+                    <i class='bx bxs-cart-download'></i>
+            </div>
+        </div>   
+       
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
+ -->
 
-  <div id="items">
-    <div class="item">
-      <h3>Item 1</h3>
-      <p>Price: Rs 10</p>
-      <button onclick="addToCart('Item 1', 10)">Add to Cart</button>
+<!-- ========================================================================================================================================= -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 Store 🛒</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="Cart.html">
+    <style>
+
+        .quantity-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .quantity-controls i {
+            cursor: pointer;
+            color: #777;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body> 
+   
+    <header>
+        <h1>07 Store 🛒</h1>
+        <i class='bx bxs-shopping-bags'></i>
+        <nav>
+            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwiZk4ql0uP_AhWEk2YCHV6wBCIYABAAGgJzbQ&sig=AOD64_2Gfq8LVevCybK1VTc9tocXv4kbjg&q&adurl&ved=2ahUKEwianYKl0uP_AhWvb2wGHU-HAOkQ0Qx6BAgGEAE">More Product</a>
+            <a href="Cart.html">Cart</a>
+        </nav>
+    </header>
+    <section>
+        <div>
+            <h2> Shoes </h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="../IMAGES/shoe.jpeg" alt="Image not Found"/>
+                <h3> Nike Shoe </h3>
+                <span> ₹1500 </span>
+                <div class="quantity-controls">
+                    <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                    <span class="quantity">0</span>
+                    <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+                </div>
+                <i class='bx bxs-cart-download'></i>
+            </div>
+            <div class="col"> 
+                <img src="../IMAGES/asianshoe.jpeg" alt="Image not Found"/>
+                <h3> Asian Shoe </h3>
+                <span> ₹799 </span>
+                <div class="quantity-controls">
+                    <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                    <span class="quantity">0</span>
+                    <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+                </div>
+                <i class='bx bxs-cart-download'></i>
+            </div>
+            <div class="col"> 
+                <img src="../IMAGES/campusshoe.jpeg" alt="Image not Found"/>
+                <h3> Campus Shoe </h3>
+                <span> ₹999 </span>
+                <div class="quantity-controls">
+                    <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                    <span class="quantity">0</span>
+                    <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+                </div>
+                <i class='bx bxs-cart-download'></i>
+            </div>
+        </div>
+        <hr/>
+        <hr/>
+        <div>
+            <h2> Bracelets  </h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="../IMAGES/bracelet.jpeg" alt="Image not Found"/>
+                <h3> Healing Stone Bracelet </h3>
+                <span> ₹999 </span>
+                <div class="quantity-controls">
+                    <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                    <span class="quantity">0</span>
+                    <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+                </div>
+                <i class='bx bxs-cart-download'></i>
+            </div>
+            <div class="col"> 
+                <img src="../IMAGES/goldb.jpeg" alt="Image not Found"/>
+                <h3> Gold Bracelet </h3>
+                <span> ₹8999 </span>
+                <div class="quantity-controls">
+                    <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                    <span class="quantity">0</span>
+                    <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+                </div>
+                <i class='bx bxs-cart-download'></i>
+            </div>
+            <div class="col"> 
+                <img src="../IMAGES/silverb.jpeg" alt="Image not Found"/>
+                <h3> Silver Bracelet </h3>
+                <span> ₹5999 </span>
+                <div class="quantity-controls">
+                    <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                    <span class="quantity">0</span>
+                    <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+                </div>
+                <i class='bx bxs-cart-download'></i>
+            </div>
+        </div>
+       <hr/>
+       <hr/>
+       <div>
+        <h2> HeadPhones </h2>
     </div>
-    <div class="item">
-      <h3>Item 2</h3>
-      <p>Price: Rs 15</p>
-      <button onclick="addToCart('Item 2', 15)">Add to Cart</button>
+    <div class="row">
+        <div class="col">
+            <img src="../IMAGES/tws.jpeg" alt="Image not Found"/>
+            <h3> Wings Tws </h3>
+            <span> ₹1500 </span>
+            <div class="quantity-controls">
+                <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                <span class="quantity">0</span>
+                <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+            </div>
+            <i class='bx bxs-cart-download'></i>
+        </div>
+        <div class="col"> 
+            <img src="../IMAGES/noise.jpeg" alt="Image not Found"/>
+            <h3> Noise Buds </h3>
+            <span> ₹1299 </span>
+            <div class="quantity-controls">
+                <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                <span class="quantity">0</span>
+                <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+            </div>
+            <i class='bx bxs-cart-download'></i>
+        </div>
+        <div class="col"> 
+            <img src="../IMAGES/boat.jpeg" alt="Image not Found"/>
+            <h3> Boat HeadPhone (Netflix Edition) </h3>
+            <span> ₹8999 </span>
+            <div class="quantity-controls">
+                <i class='bx bx-minus-circle' onclick="decreaseQuantity(this)"></i>
+                <span class="quantity">0</span>
+                <i class='bx bx-plus-circle' onclick="increaseQuantity(this)"></i>
+            </div>
+            <i class='bx bxs-cart-download'></i>
+        </div>
     </div>
-    <div class="item">
-      <h3>Item 3</h3>
-      <p>Price: Rs 20</p>
-      <button onclick="addToCart('Item 3', 20)">Add to Cart</button>
-    </div>
-  </div>
+    </section>
+    <script>
+        
+        function increaseQuantity(element) {
+            var quantityElement = element.parentElement.querySelector('.quantity');
+            var quantity = parseInt(quantityElement.textContent);
+            quantityElement.textContent = quantity + 1;
+        }
+
+        function decreaseQuantity(element) {
+            var quantityElement = element.parentElement.querySelector('.quantity');
+            var quantity = parseInt(quantityElement.textContent);
+            if (quantity > 0) {
+                quantityElement.textContent = quantity - 1;
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>                                                                                  
+</body>
+</html>
